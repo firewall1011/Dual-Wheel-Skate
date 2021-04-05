@@ -30,6 +30,8 @@ public class WheelDrive : MonoBehaviour
 	[Tooltip("The vehicle's drive type: rear-wheels drive, front-wheels drive or all-wheels drive.")]
 	public DriveType driveType;
 
+	public RotationTimer rotationTimer = default;
+
     private WheelCollider[] m_Wheels;
 
     // Find all the WheelColliders down in the hierarchy.
@@ -56,9 +58,13 @@ public class WheelDrive : MonoBehaviour
 	void Update()
 	{
 		m_Wheels[0].ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
-
-		float angle = maxAngle * Input.GetAxis("Horizontal");
-		float torque = maxTorque * Input.GetAxis("Vertical");
+		
+		float horizontalAxis = Input.GetAxis("Horizontal");
+		rotationTimer.TimeStep(horizontalAxis);
+		
+		
+		float angle = maxAngle * horizontalAxis;
+		float torque = rotationTimer.GetEvaluatedTorque(maxTorque);
 
 		float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 

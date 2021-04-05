@@ -1915,7 +1915,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 100
+          m_FloatArgument: 1000
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4267,6 +4267,7 @@ GameObject:
   - component: {fileID: 1481998714076412479}
   - component: {fileID: 1481998714076412477}
   - component: {fileID: 1481998714076412480}
+  - component: {fileID: 1481998714076412481}
   - component: {fileID: 3305220268718975836}
   - component: {fileID: 1481998714076412478}
   m_Layer: 0
@@ -4304,6 +4305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0489275e7818044ae0fa7f5800e0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  liftKey: 304
 --- !u!114 &1481998714076412478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4365,6 +4367,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpKey: 32
   jumpMagnitude: 200100
+--- !u!114 &1481998714076412481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481998714076412475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e352315abf82114491787332eafabda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetKey: 114
 --- !u!33 &1481998714096000464
 MeshFilter:
   m_ObjectHideFlags: 0

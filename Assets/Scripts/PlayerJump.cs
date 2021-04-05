@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         Debug.Log("Try Jumping");
         if (canJump && playerStats.IsPlayerAtMinVel && !playerStats.IsPlayerInAir)

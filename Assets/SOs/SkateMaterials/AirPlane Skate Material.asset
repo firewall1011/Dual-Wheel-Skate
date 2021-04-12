@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c08133d95bba043891f3690de08b07, type: 3}
-  m_Name: Alternative Skate Material
+  m_Name: AirPlane Skate Material
   m_EditorClassIdentifier: 
-  Board: {fileID: 2100000, guid: 413befd66bdd84d569871d0524b4685a, type: 2}
+  Board: {fileID: 2100000, guid: 429f6bd4aebbd1a45800a5d8de632f4b, type: 2}
   Wheels: {fileID: 2100000, guid: cabe79e5c88399d4f99e3af775db322f, type: 2}
   Metal: {fileID: 2100000, guid: 9eba989183d704f44a64af989939276d, type: 2}

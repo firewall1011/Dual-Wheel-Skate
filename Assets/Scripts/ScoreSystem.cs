@@ -9,7 +9,6 @@ public partial class ScoreSystem : MonoBehaviour
     [SerializeField] private FloatEventChannelSO ScoreIncreasedChannel = default;
     [SerializeField] private FloatEventChannelSO ScoreDecreasedChannel = default;
 
-
     public float Score
     {
         get => _score;

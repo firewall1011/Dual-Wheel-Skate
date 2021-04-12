@@ -15,3 +15,7 @@ MonoBehaviour:
   skateMaterials:
   - {fileID: 11400000, guid: a235ae1a4e2684d409d15eaf3e719d22, type: 2}
   - {fileID: 11400000, guid: afb4ef6e114482c418d02989753d505b, type: 2}
+  - {fileID: 11400000, guid: 92ec5a4a13627704aa4b233bf35ac164, type: 2}
+  - {fileID: 11400000, guid: 363cc0faf3bb8df4b852aa3774d502f6, type: 2}
+  - {fileID: 11400000, guid: f52fc8188c938e44b94716b15c9b5338, type: 2}
+  - {fileID: 11400000, guid: c10defa4906b5414e8ddda1a47698135, type: 2}

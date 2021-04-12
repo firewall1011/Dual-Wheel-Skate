@@ -62,7 +62,6 @@ public class WheelDrive : MonoBehaviour
 		float horizontalAxis = Input.GetAxis("Horizontal");
 		rotationTimer.TimeStep(horizontalAxis);
 		
-		
 		float angle = maxAngle * horizontalAxis;
 		float torque = rotationTimer.GetEvaluatedTorque(maxTorque);
 

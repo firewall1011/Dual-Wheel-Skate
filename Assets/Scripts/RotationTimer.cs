@@ -10,18 +10,21 @@ public class RotationTimer
 
     public float GetEvaluatedTorque(float maxTorque)
     {
-        return velocityCurve.Evaluate(timer) * maxTorque;
+		float evaluatedTorque = velocityCurve.Evaluate(timer.Value);
+        return evaluatedTorque * maxTorque;
     }
 
     public void TimeStep(float horizontalAxis)
-	{
-		horizontalAxis = horizontalAxis < 0f ? -1f : 1f;
+	{		
+		float normalizedHorizontalAxis = horizontalAxis < 0f ? -1f : 1f;
 
-		if (_lastDirection != horizontalAxis)
-			timer.Value = 0f;
+		if (_lastDirection != normalizedHorizontalAxis && !Mathf.Approximately(horizontalAxis, 0f))
+        {
+				timer.Value = 0f;
+				_lastDirection = normalizedHorizontalAxis;
+        }
 		else
 			timer.Value += Time.deltaTime;
 
-		_lastDirection = horizontalAxis;
 	}
 }

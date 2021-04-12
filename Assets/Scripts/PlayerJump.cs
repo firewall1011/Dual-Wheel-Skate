@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
+    [SerializeField] private VoidEventChannelSO PlayerJumpChannel;
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
     [SerializeField] private float jumpMagnitude = 30f;
 
@@ -25,13 +25,16 @@ public class PlayerJump : MonoBehaviour
 
     public void Jump()
     {
-        Debug.Log("Try Jumping");
         if (canJump && playerStats.IsPlayerAtMinVel && !playerStats.IsPlayerInAir)
         {
-            Debug.Log("Jumping");
-            playerStats.playerRigidbody.AddRelativeForce(Vector3.up * jumpMagnitude);
             StartCoroutine(CanJumpCooldown());
+            PlayerJumpChannel?.RaiseEvent();
         }
+    }
+
+    public void JumpAction()
+    {
+        playerStats.playerRigidbody.AddRelativeForce(Vector3.up * jumpMagnitude);
     }
 
     private IEnumerator CanJumpCooldown()
